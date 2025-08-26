@@ -1,5 +1,4 @@
-// App layout with language toggle and aria-live region
-import { ReactNode, useState } from 'react'
+import { type ReactNode, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { setLanguage } from './i18n'
 
@@ -7,7 +6,7 @@ export default function App({ children }: { children: ReactNode }) {
   const { t, i18n } = useTranslation()
   const [message, setMessage] = useState('')
 
-  const changeLang = (lng: 'fr' | 'en') => {
+  const changeLang = (lng: 'fr' | 'eng') => {
     setLanguage(lng)
     setMessage(`Lang set to ${lng.toUpperCase()}`)
     setTimeout(() => setMessage(''), 1000)
@@ -24,14 +23,13 @@ export default function App({ children }: { children: ReactNode }) {
           aria-label={t('language')}
           className="select w-auto"
           value={i18n.language}
-          onChange={(e) => changeLang(e.target.value as 'fr' | 'en')}
+          onChange={(e) => changeLang(e.target.value as 'fr' | 'eng')}
         >
           <option value="fr">{t('french')}</option>
-          <option value="en">{t('english')}</option>
+          <option value="eng">{t('english')}</option>
         </select>
       </header>
 
-      {/* Polite live region, visually hidden */}
       <div aria-live="polite" className="sr-only">{message}</div>
 
       <main className="mt-4">

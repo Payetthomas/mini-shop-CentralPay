@@ -1,0 +1,26 @@
+{
+    "appTitle": "Mini Shop",
+    "search": "Search by name",
+    "category": "Category",
+    "allCategories": "All categories",
+    "sortPrice": "Sort by price",
+    "asc": "Ascending",
+    "desc": "Descending",
+    "outOfStock": "Out of stock",
+    "details": "Details",
+    "edit": "Edit",
+    "price": "Price",
+    "stock": "Stock",
+    "save": "Save",
+    "cancel": "Cancel",
+    "editSuccess": "Product updated",
+    "validation": {
+      "priceMin": "Price must be ≥ 0",
+      "stockInt": "Stock must be an integer",
+      "stockMin": "Stock must be ≥ 0"
+    },
+    "language": "Language",
+    "french": "FR",
+    "english": "ENG"
+  }
+  
