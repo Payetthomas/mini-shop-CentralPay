@@ -1,15 +1,15 @@
-import { useProducts } from '../hooks/useProducts'
-import ProductCard from '../components/ProductCard'
-import { useTranslation } from 'react-i18next'
+import { useProducts } from '../hooks/useProducts';
+import ProductCard from '../components/ProductCard';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const {
     products, categories,
     search, setSearch,
     category, setCategory,
     sortAsc, setSortAsc,
-  } = useProducts()
+  } = useProducts();
 
   return (
     <section>
@@ -61,5 +61,5 @@ export default function Home() {
         {products.map(p => <ProductCard key={p.id} product={p} />)}
       </div>
     </section>
-  )
+  );
 }
