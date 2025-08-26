@@ -8,7 +8,7 @@ export default function App({ children }: { children: ReactNode }) {
 
   const changeLang = (lng: 'fr' | 'eng') => {
     setLanguage(lng)
-    setMessage(`Lang set to ${lng.toUpperCase()}`)
+    setMessage(`Language : ${lng.toUpperCase()}`)
     setTimeout(() => setMessage(''), 1000)
   }
 
@@ -25,7 +25,7 @@ export default function App({ children }: { children: ReactNode }) {
           value={i18n.language}
           onChange={(e) => changeLang(e.target.value as 'fr' | 'eng')}
         >
-          <option value="fr">{t('french')}</option>
+          <option value="fr">{t('français')}</option>
           <option value="eng">{t('english')}</option>
         </select>
       </header>
