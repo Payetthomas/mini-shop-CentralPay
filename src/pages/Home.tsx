@@ -1,5 +1,5 @@
 import { useProducts } from '../hooks/useProducts';
-import ProductCard from '../components/ProductCard';
+import ProductList from '../components/ProductList';
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
@@ -57,9 +57,7 @@ export default function Home() {
         </div>
       </form>
 
-      <div className="grid gap-3 [grid-template-columns:repeat(auto-fill,minmax(260px,1fr))]">
-        {products.map(p => <ProductCard key={p.id} product={p} />)}
-      </div>
+      <ProductList products={products} />
     </section>
   );
 }

@@ -14,6 +14,7 @@
     "save": "Enregistrer",
     "cancel": "Annuler",
     "editSuccess": "Produit mis à jour",
+    "noResults": "Aucun résultat",
     "validation": {
       "priceMin": "Le prix doit être ≥ 0",
       "stockInt": "Le stock doit être un entier",
